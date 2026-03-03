@@ -1,6 +1,6 @@
 const options = [
   {
-    icon: '📦',
+    icon: '',
     title: 'Amazon Registry',
     description: 'Browse our curated wishlist of items to help us build our home together.',
     label: 'View Registry',
@@ -8,7 +8,7 @@ const options = [
     color: 'registry-card--amazon',
   },
   {
-    icon: '💚',
+    icon: '',
     title: 'Venmo',
     description: 'Prefer to give a cash gift? Send it directly via Venmo — every bit is so appreciated.',
     label: 'Send via Venmo',

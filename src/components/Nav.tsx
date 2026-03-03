@@ -1,17 +1,24 @@
 import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
-const links = [
-  { label: 'Our Story', href: '#story' },
-  { label: 'Ceremony', href: '#ceremony' },
-  { label: 'Reception', href: '#reception' },
-  { label: 'Gallery', href: '#gallery' },
+// Main working links (scroll to section on main page)
+const mainLinks = [
+  { label: 'Events', href: '#events' },
   { label: 'Registry', href: '#registry' },
   { label: 'RSVP', href: '#rsvp' },
+]
+
+// Coming soon pages (placed at the right corner of the nav)
+const secondaryLinks = [
+  { label: 'Our Story', to: '/story' },
+  { label: 'Gallery', to: '/gallery' },
+  { label: 'Program', to: '/program' },
 ]
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const { pathname } = useLocation()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50)
@@ -19,17 +26,19 @@ export default function Nav() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault()
+  const handleSectionClick = (e: React.MouseEvent<HTMLAnchorElement>, hash: string) => {
     setMenuOpen(false)
-    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
+    if (pathname === '/') {
+      e.preventDefault()
+      document.querySelector(hash)?.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 
   return (
     <nav className={`nav${scrolled ? ' nav--scrolled' : ''}`}>
-      <a className="nav__logo" href="#top" onClick={(e) => handleClick(e, '#top')}>
+      <Link className="nav__logo" to="/">
         A &amp; E
-      </a>
+      </Link>
       <button
         className={`nav__burger${menuOpen ? ' nav__burger--open' : ''}`}
         onClick={() => setMenuOpen(!menuOpen)}
@@ -37,13 +46,28 @@ export default function Nav() {
       >
         <span /><span /><span />
       </button>
-      <ul className={`nav__links${menuOpen ? ' nav__links--open' : ''}`}>
-        {links.map(({ label, href }) => (
-          <li key={href}>
-            <a href={href} onClick={(e) => handleClick(e, href)}>{label}</a>
-          </li>
-        ))}
-      </ul>
+      <div className={`nav__right${menuOpen ? ' nav__right--open' : ''}`}>
+        <ul className="nav__links">
+          {mainLinks.map(({ label, href }) => (
+            <li key={href}>
+              <a
+                href={pathname !== '/' ? `/${href}` : href}
+                onClick={(e) => handleSectionClick(e, href)}
+              >
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <div className="nav__sep" aria-hidden="true" />
+        <ul className="nav__links nav__links--secondary">
+          {secondaryLinks.map(({ label, to }) => (
+            <li key={to}>
+              <Link to={to} onClick={() => setMenuOpen(false)}>{label}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </nav>
   )
 }

@@ -1,8 +1,6 @@
 // RSVP Google Form link
-// Note: To get the embeddable URL, open your form, click "Send", select the embed icon (<>), 
-// and copy the src URL from the iframe code
-const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeGQdGzXU5fZ7wV9yIxVLxvQXqGxp5_YL5YqLxqLxqLx/viewform?embedded=true'
-const GOOGLE_FORM_LINK = 'https://forms.gle/eXuvMgLFxjNowBkTA'
+const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdNAUclq02qJGsspcaFbXPd2FNV1DWpE0IAIJjaaWRV1qmS3w/viewform?embedded=true'
+const GOOGLE_FORM_LINK = 'https://docs.google.com/forms/d/e/1FAIpQLSdNAUclq02qJGsspcaFbXPd2FNV1DWpE0IAIJjaaWRV1qmS3w/viewform'
 
 export default function RSVP() {
   return (
