@@ -1,4 +1,4 @@
-interface EventCardProps {
+interface EventEntryProps {
   id: string
   icon: string
   title: string
@@ -11,45 +11,47 @@ interface EventCardProps {
   notices?: string[]
 }
 
-function EventCard({ id, icon, title, date, time, venue, address, mapsUrl, note, notices }: EventCardProps) {
-  const defaultMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`
-  const finalMapsUrl = mapsUrl || defaultMapsUrl
+function EventEntry({ id, icon, title, date, time, venue, address, mapsUrl, note, notices }: EventEntryProps) {
+  const finalMapsUrl = mapsUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`
 
   return (
-    <div id={id} className="event-card">
-      <div className="event-card__header">
-        <div className="event-card__icon">{icon}</div>
-        <h3 className="event-card__title">{title}</h3>
-        {note && <p className="event-card__note">{note}</p>}
+    <div id={id} className="event">
+      <div className="event__icon">{icon}</div>
+      <h3 className="event__name">{title}</h3>
+      <div className="event__ornament">
+        <span /><span className="event__ornament-dot" /><span />
       </div>
-      <div className="event-card__body">
-        <div className="event-card__details">
-          <div className="event-card__row">
-            <span className="event-card__label">Date</span>
-            <span>{date}</span>
-          </div>
-          <div className="event-card__row">
-            <span className="event-card__label">Time</span>
-            <span>{time}</span>
-          </div>
-          <div className="event-card__row">
-            <span className="event-card__label">Venue</span>
-            <span>{venue}</span>
-          </div>
-          <div className="event-card__row">
-            <span className="event-card__label">Address</span>
-            <span>{address}</span>
-          </div>
+      <div className="event__info">
+        <div className="event__row">
+          <span className="event__label">Date</span>
+          <span className="event__value">{date}</span>
         </div>
-        {notices && notices.length > 0 && (
-          <ul className="event-card__notices">
-            {notices.map((n, i) => <li key={i}>{n}</li>)}
-          </ul>
-        )}
-        <a href={finalMapsUrl} target="_blank" rel="noopener noreferrer" className="btn btn--outline">
-          Get Directions
-        </a>
+        <div className="event__row">
+          <span className="event__label">Time</span>
+          <span className="event__value">
+            {time}
+            {notices && notices.length > 0 && (
+              <span className="event__notices">
+                {notices.map((n, i) => (
+                  <span key={i} className="event__notice">{n}</span>
+                ))}
+              </span>
+            )}
+          </span>
+        </div>
+        <div className="event__row">
+          <span className="event__label">Venue</span>
+          <span className="event__value">{venue}</span>
+        </div>
+        <div className="event__row">
+          <span className="event__label">Address</span>
+          <span className="event__value">{address}</span>
+        </div>
       </div>
+      {note && <p className="event__note">{note}</p>}
+      <a href={finalMapsUrl} target="_blank" rel="noopener noreferrer" className="btn btn--outline">
+        Get Directions
+      </a>
     </div>
   )
 }
@@ -60,8 +62,8 @@ export default function Events() {
       <div className="container">
         <h2 className="section__title">Celebration Details</h2>
         <p className="section__subtitle">Join us for these special moments</p>
-        <div className="events__grid">
-          <EventCard
+        <div className="events__pair">
+          <EventEntry
             id="ceremony"
             icon="℘"
             title="Temple Sealing"
@@ -72,11 +74,12 @@ export default function Events() {
             mapsUrl="https://maps.app.goo.gl/cFF93SwYhG7pdn5JA"
             note="Join us as we are sealed for time and all eternity."
             notices={[
-              'Temple sealing is by invitation only.',
-              'All other guests are welcome to gather at the temple grounds at 9:20 AM for a group photo.',
+              'The sealing ceremony is reserved for invited guests.',
+              'All other guests are warmly invited to gather on the temple grounds at 9:20 AM for a group photograph.',
             ]}
           />
-          <EventCard
+          <div className="events__vdivider" />
+          <EventEntry
             id="reception"
             icon="✦"
             title="Wedding Reception"

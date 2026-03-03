@@ -17,8 +17,8 @@
   --gray: #7A7A7A;
   --light-gray: #F9F7F5;
   --white: #ffffff;
-  --font-serif: 'Georgia', 'Times New Roman', serif;
-  --font-sans: 'Helvetica Neue', Arial, sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Jost', 'Helvetica Neue', Arial, sans-serif;
   --nav-h: 64px;
   --radius: 12px;
 }
