@@ -1,16 +1,19 @@
 import { useState } from 'react'
 
-// Placeholder photos using picsum — replace with real photo URLs
+// Wedding photos from engagement shoot and couple photos
 const photos = [
-  { src: 'https://picsum.photos/seed/wedding1/800/600', thumb: 'https://picsum.photos/seed/wedding1/400/300', alt: 'Photo 1' },
-  { src: 'https://picsum.photos/seed/wedding2/800/600', thumb: 'https://picsum.photos/seed/wedding2/400/300', alt: 'Photo 2' },
-  { src: 'https://picsum.photos/seed/wedding3/600/800', thumb: 'https://picsum.photos/seed/wedding3/300/400', alt: 'Photo 3' },
-  { src: 'https://picsum.photos/seed/wedding4/800/600', thumb: 'https://picsum.photos/seed/wedding4/400/300', alt: 'Photo 4' },
-  { src: 'https://picsum.photos/seed/wedding5/800/600', thumb: 'https://picsum.photos/seed/wedding5/400/300', alt: 'Photo 5' },
-  { src: 'https://picsum.photos/seed/wedding6/600/800', thumb: 'https://picsum.photos/seed/wedding6/300/400', alt: 'Photo 6' },
-  { src: 'https://picsum.photos/seed/wedding7/800/600', thumb: 'https://picsum.photos/seed/wedding7/400/300', alt: 'Photo 7' },
-  { src: 'https://picsum.photos/seed/wedding8/800/600', thumb: 'https://picsum.photos/seed/wedding8/400/300', alt: 'Photo 8' },
-  { src: 'https://picsum.photos/seed/wedding9/600/800', thumb: 'https://picsum.photos/seed/wedding9/300/400', alt: 'Photo 9' },
+  { src: '/images/engage-photo/Ask01-fix.jpg', thumb: '/images/engage-photo/Ask01-fix.jpg', alt: 'Engagement Photo 1' },
+  { src: '/images/engage-photo/Ask09.jpg', thumb: '/images/engage-photo/Ask09.jpg', alt: 'Engagement Photo 2' },
+  { src: '/images/engage-photo/Ask13.jpg', thumb: '/images/engage-photo/Ask13.jpg', alt: 'Engagement Photo 3' },
+  { src: '/images/engage-photo/Ask16.jpg', thumb: '/images/engage-photo/Ask16.jpg', alt: 'Engagement Photo 4' },
+  { src: '/images/engage-photo/Ask23.jpg', thumb: '/images/engage-photo/Ask23.jpg', alt: 'Engagement Photo 5' },
+  { src: '/images/engage-photo/Ask35-fix.jpg', thumb: '/images/engage-photo/Ask35-fix.jpg', alt: 'Engagement Photo 6' },
+  { src: '/images/engage-photo/Ask36-fix.jpg', thumb: '/images/engage-photo/Ask36-fix.jpg', alt: 'Engagement Photo 7' },
+  { src: '/images/engage-photo/Ask38.jpg', thumb: '/images/engage-photo/Ask38.jpg', alt: 'Engagement Photo 8' },
+  { src: '/images/engage-photo/Ask41.jpg', thumb: '/images/engage-photo/Ask41.jpg', alt: 'Engagement Photo 9' },
+  { src: '/images/general/IMG_8231.jpg', thumb: '/images/general/IMG_8231.jpg', alt: 'Couple Photo 1' },
+  { src: '/images/general/IMG_8236.jpg', thumb: '/images/general/IMG_8236.jpg', alt: 'Couple Photo 2' },
+  { src: '/images/temple/IMG_1236.JPG', thumb: '/images/temple/IMG_1236.JPG', alt: 'Temple Photo 1' },
 ]
 
 export default function Gallery() {

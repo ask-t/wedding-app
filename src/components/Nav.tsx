@@ -28,7 +28,7 @@ export default function Nav() {
   return (
     <nav className={`nav${scrolled ? ' nav--scrolled' : ''}`}>
       <a className="nav__logo" href="#top" onClick={(e) => handleClick(e, '#top')}>
-        A &amp; J
+        A &amp; E
       </a>
       <button
         className={`nav__burger${menuOpen ? ' nav__burger--open' : ''}`}

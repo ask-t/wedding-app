@@ -1,19 +1,21 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 :root {
-  --cream: #fdfaf6;
-  --rose: #c9a9a6;
-  --rose-dark: #a8827e;
-  --sage: #8faa91;
-  --gold: #c9a96e;
-  --gold-dark: #a8844a;
-  --charcoal: #2d2d2d;
-  --gray: #6b6b6b;
-  --light-gray: #f0ebe5;
+  --cream: #FEFDFB;
+  --rose: #F4D7DC;
+  --rose-dark: #E8B4BD;
+  --sage: #C8D5C8;
+  --gold: #D4A574;
+  --gold-dark: #B8885E;
+  --charcoal: #4A4A4A;
+  --gray: #7A7A7A;
+  --light-gray: #F9F7F5;
   --white: #ffffff;
   --font-serif: 'Georgia', 'Times New Roman', serif;
   --font-sans: 'Helvetica Neue', Arial, sans-serif;

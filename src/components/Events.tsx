@@ -51,22 +51,22 @@ export default function Events() {
           <EventCard
             id="ceremony"
             icon="💍"
-            title="Wedding Ceremony"
-            date="Sunday, June 14, 2026"
-            time="3:00 PM"
-            venue="The Grand Chapel"
-            address="123 Chapel Lane, New York, NY 10001"
-            note="Please arrive 15 minutes early. Seating begins at 2:30 PM."
+            title="Temple Sealing"
+            date="April 25, 2026"
+            time="8:45 AM"
+            venue="Laie Hawaii Temple"
+            address="55-600 Naniloa Loop, Laie, HI 96762"
+            note="Join us as we are sealed for time and all eternity."
           />
           <EventCard
             id="reception"
             icon="🥂"
             title="Wedding Reception"
-            date="Sunday, June 14, 2026"
-            time="5:30 PM – 10:00 PM"
-            venue="The Garden Ballroom"
-            address="456 Garden Ave, New York, NY 10002"
-            note="Cocktail hour begins immediately following the ceremony. Dinner service at 6:30 PM."
+            date="April 25, 2026"
+            time="1:00 PM"
+            venue="The Aloha Center Ballroom"
+            address="55-220 Kulanui St Laie, HI 96762"
+            note="Please celebrate with us at our reception. Lunch will be served."
           />
         </div>
       </div>

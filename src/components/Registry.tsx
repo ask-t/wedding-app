@@ -4,8 +4,7 @@ const options = [
     title: 'Amazon Registry',
     description: 'Browse our curated wishlist of items to help us build our home together.',
     label: 'View Registry',
-    // TODO: Replace with your actual Amazon registry URL
-    href: 'https://www.amazon.com/wedding/registry/YOUR_REGISTRY_ID',
+    href: 'https://www.amazon.com/wedding/share/ask-erie',
     color: 'registry-card--amazon',
   },
   {
@@ -13,8 +12,7 @@ const options = [
     title: 'Venmo',
     description: 'Prefer to give a cash gift? Send it directly via Venmo — every bit is so appreciated.',
     label: 'Send via Venmo',
-    // TODO: Replace with your Venmo username
-    href: 'https://venmo.com/YOUR_VENMO_HANDLE',
+    href: 'https://venmo.com/u/erietse',
     color: 'registry-card--venmo',
   },
 ]

@@ -1,8 +1,8 @@
-// TODO: Replace GOOGLE_FORM_URL with your actual Google Form URL
-// To embed: use the Google Form "embed" link (File > Embed)
-// To link:  use the standard shareable Google Form link
-const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/YOUR_FORM_ID/viewform?embedded=true'
-const GOOGLE_FORM_LINK = 'https://docs.google.com/forms/d/YOUR_FORM_ID/viewform'
+// RSVP Google Form link
+// Note: To get the embeddable URL, open your form, click "Send", select the embed icon (<>), 
+// and copy the src URL from the iframe code
+const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeGQdGzXU5fZ7wV9yIxVLxvQXqGxp5_YL5YqLxqLxqLx/viewform?embedded=true'
+const GOOGLE_FORM_LINK = 'https://forms.gle/eXuvMgLFxjNowBkTA'
 
 export default function RSVP() {
   return (
@@ -10,7 +10,7 @@ export default function RSVP() {
       <div className="container">
         <h2 className="section__title">RSVP</h2>
         <p className="section__subtitle">
-          Please respond by <strong>May 1, 2026</strong>. We can't wait to celebrate with you!
+          Please respond by <strong>April 18, 2026</strong>. We can't wait to celebrate with you!
         </p>
         <div className="rsvp__frame-wrap">
           <iframe

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const WEDDING_DATE = new Date('2026-06-14T15:00:00')
+const WEDDING_DATE = new Date('2026-04-25T08:45:00')
 
 function getCountdown() {
   const diff = WEDDING_DATE.getTime() - Date.now()
@@ -26,8 +26,8 @@ export default function Hero() {
       <div className="hero__overlay" />
       <div className="hero__content">
         <p className="hero__eyebrow">We're getting married</p>
-        <h1 className="hero__names">Alex &amp; Jordan</h1>
-        <p className="hero__date">June 14, 2026</p>
+        <h1 className="hero__names">Asuku &amp; Erie</h1>
+        <p className="hero__date">April 25, 2026</p>
         <div className="hero__divider">
           <span />
           <span className="hero__divider-icon">♥</span>
