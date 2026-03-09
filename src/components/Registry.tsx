@@ -2,7 +2,7 @@ const options = [
   {
     icon: '',
     title: 'Amazon Registry',
-    description: 'Browse our curated wishlist of items to help us build our home together.',
+    description: "",
     label: 'View Registry',
     href: 'https://www.amazon.com/wedding/share/ask-erie',
     color: 'registry-card--amazon',
@@ -10,7 +10,7 @@ const options = [
   {
     icon: '',
     title: 'Venmo',
-    description: 'Prefer to give a cash gift? Send it directly via Venmo — every bit is so appreciated.',
+    description: '',
     label: 'Send via Venmo',
     href: 'https://venmo.com/u/erietse',
     color: 'registry-card--venmo',
@@ -23,7 +23,7 @@ export default function Registry() {
       <div className="container">
         <h2 className="section__title">Registry &amp; Gifts</h2>
         <p className="section__subtitle">
-          Your presence is the greatest gift — but if you'd like to celebrate with a gift, here are some ways to do so.
+          Your presence is truly the best gift we could ask for. If you'd like to do a little more, we're so grateful.
         </p>
         <div className="registry__grid">
           {options.map((opt) => (

@@ -97,8 +97,13 @@ export default function Events() {
           <div className="detail-section">
             <h3 className="detail-section__title">Dress Code</h3>
             <div className="detail-section__content">
-              <p>We kindly request formal or semi-formal attire. Think elegant and celebratory!</p>
-              <p><strong>For the Temple:</strong> Conservative, modest clothing is appreciated.</p>
+              <p>We'd love for guests to embrace a <strong>light spring palette</strong> — soft pastels, florals, and fresh colors are all welcome.</p>
+              <p><strong>For the Temple:</strong> Sunday best — think what you'd wear to a church service.</p>
+              <img
+                src="/images/Spring_Color.jpg"
+                alt="Light Spring Color Palette"
+                style={{ width: '100%', maxWidth: '480px', borderRadius: '12px', marginTop: '1rem' }}
+              />
             </div>
           </div>
         </div>
