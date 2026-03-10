@@ -8,7 +8,7 @@ export default function RSVP() {
       <div className="container">
         <h2 className="section__title">RSVP</h2>
         <p className="section__subtitle">
-          Please respond by <strong>April 18, 2026</strong>. We can't wait to celebrate with you!
+          Please respond by <strong>April 4, 2026</strong>. We can't wait to celebrate with you!
         </p>
         <div className="rsvp__frame-wrap">
           <iframe

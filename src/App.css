@@ -250,7 +250,7 @@
   justify-content: center;
   text-align: center;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(254, 249, 246, 0.85) 30%, rgba(255, 245, 242, 0.85) 60%, rgba(249, 245, 243, 0.85) 100%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(254, 249, 246, 0.55) 30%, rgba(255, 245, 242, 0.55) 60%, rgba(249, 245, 243, 0.55) 100%),
     url('/images/engage-photo/Ask13.jpg');
   background-size: cover;
   background-position: center;
@@ -270,7 +270,7 @@
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .hero__content {
@@ -340,17 +340,17 @@
 
 .hero__countdown-num {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-size: clamp(2.8rem, 8vw, 5rem);
   color: var(--gold-dark);
   line-height: 1;
 }
 
 .hero__countdown-label {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--gray);
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 /* ─── Story / Timeline ─────────────────────────────────────── */
@@ -468,7 +468,7 @@
 
 .events__pair {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -494,6 +494,7 @@
   align-items: center;
   text-align: center;
   padding: 0 48px;
+  justify-content: flex-start;
 }
 
 .event__icon {
@@ -645,16 +646,16 @@
 
 .detail-section__title {
   font-family: var(--font-serif);
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: var(--charcoal);
   margin-bottom: 16px;
   font-weight: 400;
 }
 
 .detail-section__content {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--gray);
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 .detail-section__content p {
@@ -839,11 +840,11 @@
 }
 
 .registry-card--amazon {
-  border-top-color: #ff9900;
+  border-top-color: var(--gold);
 }
 
 .registry-card--venmo {
-  border-top-color: #3d95ce;
+  border-top-color: var(--gold);
 }
 
 .registry-card__icon {
