@@ -1,17 +1,22 @@
+interface TimeSlot {
+  time: string
+  note: string
+}
+
 interface EventEntryProps {
   id: string
   icon: string
   title: string
   date: string
   time: string
+  timeSlots?: TimeSlot[]
   venue: string
   address: string
   mapsUrl?: string
   note?: string
-  notices?: string[]
 }
 
-function EventEntry({ id, icon, title, date, time, venue, address, mapsUrl, note, notices }: EventEntryProps) {
+function EventEntry({ id, icon, title, date, time, timeSlots, venue, address, mapsUrl, note }: EventEntryProps) {
   const finalMapsUrl = mapsUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`
 
   return (
@@ -26,19 +31,22 @@ function EventEntry({ id, icon, title, date, time, venue, address, mapsUrl, note
           <span className="event__label">Date</span>
           <span className="event__value">{date}</span>
         </div>
-        <div className="event__row">
-          <span className="event__label">Time</span>
-          <span className="event__value">
-            {time}
-            {notices && notices.length > 0 && (
-              <span className="event__notices">
-                {notices.map((n, i) => (
-                  <span key={i} className="event__notice">{n}</span>
-                ))}
+        {timeSlots ? (
+          timeSlots.map((slot, i) => (
+            <div key={i} className="event__row">
+              <span className="event__label">{i === 0 ? 'Time' : ''}</span>
+              <span className="event__value">
+                {slot.time}
+                <span className="event__slot-note">{slot.note}</span>
               </span>
-            )}
-          </span>
-        </div>
+            </div>
+          ))
+        ) : (
+          <div className="event__row">
+            <span className="event__label">Time</span>
+            <span className="event__value">{time}</span>
+          </div>
+        )}
         <div className="event__row">
           <span className="event__label">Venue</span>
           <span className="event__value">{venue}</span>
@@ -69,14 +77,14 @@ export default function Events() {
             title="Temple Sealing"
             date="April 25, 2026"
             time="8:45 AM"
+            timeSlots={[
+              { time: '8:45 AM', note: 'Sealing — invited guests only' },
+              { time: '9:20 AM', note: 'Group photograph — all welcome' },
+            ]}
             venue="Laie Hawaii Temple"
             address="55-600 Naniloa Loop, Laie, HI 96762"
             mapsUrl="https://maps.app.goo.gl/cFF93SwYhG7pdn5JA"
             note="Join us as we are sealed for time and all eternity."
-            notices={[
-              'The sealing ceremony is reserved for invited guests.',
-              'All other guests are warmly invited to gather on the temple grounds at 9:20 AM for a group photograph.',
-            ]}
           />
           <div className="events__vdivider" />
           <EventEntry

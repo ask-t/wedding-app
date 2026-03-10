@@ -577,18 +577,13 @@
   align-items: flex-end;
 }
 
-.event__notices {
-  margin-top: 6px;
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-
-.event__notice {
+.event__slot-note {
   font-size: 0.72rem;
   color: var(--gold-dark);
   font-style: italic;
   line-height: 1.5;
+  display: block;
+  margin-top: 2px;
 }
 
 .event__note {
