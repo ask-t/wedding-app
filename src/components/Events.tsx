@@ -106,7 +106,7 @@ export default function Events() {
             <h3 className="detail-section__title">Dress Code</h3>
             <div className="detail-section__content">
               <p>We'd love for guests to embrace a <strong>light spring palette</strong> — soft pastels, florals, and fresh colors are all welcome.</p>
-              <p><strong>For events outside the Temple:</strong> Aloha standard — aloha shirts, sundresses, dressy resort wear, or other polished island-inspired attire.</p>
+              <p><strong>For the Reception:</strong> Aloha standard — aloha shirts, sundresses, dressy resort wear, or other polished island-inspired attire.</p>
               <p><strong>For the Temple:</strong> Sunday best — think what you'd wear to a church service.</p>
               <img
                 src="/images/Spring_Color.jpg"
