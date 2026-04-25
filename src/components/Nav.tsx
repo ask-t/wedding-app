@@ -8,12 +8,6 @@ const mainLinks = [
   { label: 'RSVP', href: '#rsvp' },
 ]
 
-// Coming soon pages (placed at the right corner of the nav)
-const secondaryLinks = [
-  { label: 'Our Story', to: '/story' },
-  { label: 'Gallery', to: '/gallery' },
-  { label: 'Program', to: '/program' },
-]
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
@@ -56,14 +50,6 @@ export default function Nav() {
               >
                 {label}
               </a>
-            </li>
-          ))}
-        </ul>
-        <div className="nav__sep" aria-hidden="true" />
-        <ul className="nav__links nav__links--secondary">
-          {secondaryLinks.map(({ label, to }) => (
-            <li key={to}>
-              <Link to={to} onClick={() => setMenuOpen(false)}>{label}</Link>
             </li>
           ))}
         </ul>
